@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addToDo, calculateAchievement } from "../slice/slice";
-import { vanillaApp } from "../styles.css";
+import { vanillaApp } from "../styles/styles.css";
 
 interface inputForm {
     task: String
