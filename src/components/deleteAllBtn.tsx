@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { deleteAllToDo } from "../slice/slice";
 
-function DeleteAllBtn() {
+export const DeleteAllBtn = () => {
     const dispatch = useDispatch();
 
     const handleDeleteAll = () => {
@@ -12,5 +12,3 @@ function DeleteAllBtn() {
         <button onClick={() =>handleDeleteAll()}>全て削除する</button>
     )
 }
-
-export default DeleteAllBtn;
