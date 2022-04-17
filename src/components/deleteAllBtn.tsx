@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { deleteAllToDo } from "../slice/slice";
-import { themeClass, alertBtn } from "../styles/variants.css";
+import { themeClass, alertBtn } from "../styles/scopedTheme.css";
 
 export const DeleteAllBtn = () => {
     const dispatch = useDispatch();
