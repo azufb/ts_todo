@@ -18,15 +18,18 @@ export const ToDos = () => {
     }
 
     return (
-        <ul>
-            {todo.map((item) => {
-               return ( 
-                <li key={item.id}>{item.title}
-                    {!item.status ? <button onClick={() => handleChangeStatus(item.id)}>未完了</button> : <button>完了</button>}
-                    <button onClick={() => handleDeleteToDo(item.id)}>削除</button>
-                </li>
-               )
-            })}
-        </ul>
+        <div>
+            <h1>タスク一覧</h1>
+            <ul>
+                {todo.map((item) => {
+                return ( 
+                    <li key={item.id}>{item.title}
+                        {!item.status ? <button onClick={() => handleChangeStatus(item.id)}>未完了</button> : <button>完了</button>}
+                        <button onClick={() => handleDeleteToDo(item.id)}>削除</button>
+                    </li>
+                )
+                })}
+            </ul>
+        </div>
     )
 }
