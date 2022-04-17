@@ -1,8 +1,8 @@
 import { globalStyle } from "@vanilla-extract/css";
 
 globalStyle('body, #root', {
-    backgroundColor: '#1A1A1A',
-    color: '#ffffff',
+    backgroundColor: '#FFFFFF',
+    color: '#1A1A1A',
     margin: '0',
     display: 'flex',
     flexDirection: 'column',
