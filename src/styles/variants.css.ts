@@ -1,7 +1,11 @@
-import { styleVariants } from "@vanilla-extract/css";
+import { createTheme, style } from "@vanilla-extract/css";
 
-export const variants = styleVariants({
-    alert: {
-        backgroundColor: 'red'
+export const [themeClass, vars] = createTheme({
+    background: {
+        alert: 'red'
     }
+});
+
+export const alertBtn = style({
+    backgroundColor: vars.background.alert
 });
