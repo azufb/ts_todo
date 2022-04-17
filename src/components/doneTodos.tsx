@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { backStatus, calculateAchievement, deleteDoneToDo } from "../slice/slice";
 import { RootState } from '../store/store';
 
-function DoneToDos() {
+export const DoneToDos = () => {
     const dispatch = useDispatch();
     const doneTodos = useSelector((state: RootState) => state.todo.doneTodos);
     
@@ -28,5 +28,3 @@ function DoneToDos() {
         </div>
     )
 }
-
-export default DoneToDos;
