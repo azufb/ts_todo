@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { calculateAchievement, changeStatus, deleteToDo } from "../slice/slice";
 import { RootState } from '../store/store';
 
-function ToDos() {
+export const ToDos = () => {
     const dispatch = useDispatch();
     const todo = useSelector((state: RootState) => state.todo.todos);
 
@@ -30,5 +30,3 @@ function ToDos() {
         </ul>
     )
 }
-
-export default ToDos;
