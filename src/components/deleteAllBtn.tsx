@@ -9,6 +9,8 @@ export const DeleteAllBtn = () => {
     }
 
     return (
-        <button onClick={() =>handleDeleteAll()}>全て削除する</button>
+        <div>
+            <button onClick={() =>handleDeleteAll()}>全て削除する</button>
+        </div>
     )
 }
