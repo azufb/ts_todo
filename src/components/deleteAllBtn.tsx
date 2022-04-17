@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { deleteAllToDo } from "../slice/slice";
+import { variants } from "../styles/variants.css";
 
 export const DeleteAllBtn = () => {
     const dispatch = useDispatch();
@@ -10,7 +11,7 @@ export const DeleteAllBtn = () => {
 
     return (
         <div>
-            <button onClick={() =>handleDeleteAll()}>全て削除する</button>
+            <button onClick={() =>handleDeleteAll()} className={variants.alert}>全て削除する</button>
         </div>
     )
 }
