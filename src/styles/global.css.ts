@@ -1,6 +1,10 @@
 import { globalStyle } from "@vanilla-extract/css";
 
-globalStyle('html, body', {
+globalStyle('body, #root', {
     backgroundColor: '#1A1A1A',
-    color: '#ffffff'
-})
+    color: '#ffffff',
+    margin: '0',
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh'
+});
