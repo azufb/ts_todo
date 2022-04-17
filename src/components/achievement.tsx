@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 
-function Achievement() {
+export const Achievement = () => {
     const percentageAchievement = useSelector((state: RootState) => state.todo.achievement);
     return (
         <div>
@@ -10,5 +10,3 @@ function Achievement() {
         </div>
     )
 }
-
-export default Achievement;
