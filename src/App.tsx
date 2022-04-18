@@ -1,4 +1,4 @@
-import { Form } from './components/form';
+import { Form } from './components/Form';
 import { ToDos } from './components/ToDos';
 import { DoneToDos } from "./components/DoneToDos";
 //import { Achievement } from "./components/Achievement";
