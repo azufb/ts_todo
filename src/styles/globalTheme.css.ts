@@ -6,5 +6,10 @@ export const globalTheme = createGlobalTheme(':root', {
     },
     font: {
         color: '#FFFFFF'
+    },
+    size: {
+        xs: '0.5rem',
+        s: '1.5rem',
+        m: '2.5rem'
     }
 })
