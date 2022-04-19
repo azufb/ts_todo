@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { backStatus, calculateAchievement, deleteDoneToDo } from "../slice/slice";
 import { RootState } from '../store/store';
+import { sprinkles } from "../styles/sprinkles.css";
 
 export const DoneToDos = () => {
     const dispatch = useDispatch();
@@ -13,8 +14,8 @@ export const DoneToDos = () => {
     }
 
     return (
-        <div>
-            <h1>Done!</h1>
+        <div className={sprinkles({width: '50%'})}>
+            <h1 className={sprinkles({textAlign: 'center'})}>Done!</h1>
             <ul>
                 {doneTodos.map((item) => {
                     return (

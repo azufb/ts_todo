@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { calculateAchievement, changeStatus, deleteToDo } from "../slice/slice";
 import { RootState } from '../store/store';
+import { DeleteAllBtn } from "./DeleteAllBtn";
+import { sprinkles } from "../styles/sprinkles.css";
 
 export const ToDos = () => {
     const dispatch = useDispatch();
@@ -18,8 +20,9 @@ export const ToDos = () => {
     }
 
     return (
-        <div>
-            <h1>タスク一覧</h1>
+        <div className={sprinkles({width: '50%'})}>
+            <h1 className={sprinkles({textAlign: 'center'})}>タスク一覧</h1>
+            <DeleteAllBtn />
             <ul>
                 {todo.map((item) => {
                 return ( 
