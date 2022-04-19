@@ -4,8 +4,7 @@ import { globalTheme } from "./globalTheme.css";
 const responsiveStyle = defineProperties({
     conditions: {
         desktop: { '@media': 'screen and (min-width: 1024px)' },
-        tablet: { '@media': 'screen and (min-width: 768px)' },
-        mobile: {}
+        mobile: { '@media': 'screen and (max-width: 1023px)' }
     },
     defaultCondition: 'desktop',
     properties: {
