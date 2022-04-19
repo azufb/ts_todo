@@ -1,4 +1,5 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
+import { globalTheme } from "./globalTheme.css";
 
 const responsiveStyle = defineProperties({
     conditions: {
@@ -10,6 +11,10 @@ const responsiveStyle = defineProperties({
     properties: {
         display: ['flex', 'block'],
         justifyContent: ['center'],
+        textAlign: ['center', 'left'],
+        width: ['50%', '100%'],
+        paddingLeft: globalTheme.size,
+        paddingRight: globalTheme.size
     }
 });
 
