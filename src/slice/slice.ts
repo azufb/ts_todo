@@ -13,7 +13,7 @@ interface todoItem {
         status: boolean;
     }[] | [],
     doneTodos: {
-        id: number;
+        id: string;
         title: string;
         status: boolean;
     }[] | [],
@@ -48,8 +48,15 @@ const todoSlice = createSlice({
 
             if (clickedToDo) {
                 clickedToDo.status = !clickedToDo.status;
+
+                let id;
+                if (state.doneTodos.length === 0) {
+                    id = 0;
+                } else {
+                    id = state.doneTodos[state.doneTodos.length - 1].id + 1;
+                }
                 
-                state.doneTodos = [...state.doneTodos, {id: clickedToDo.id, title: clickedToDo.title, status: clickedToDo.status}];
+                state.doneTodos = [...state.doneTodos, {id: `done-${id}`, title: clickedToDo.title, status: clickedToDo.status}];
             }
         },
         backStatus: (state, action) => {
@@ -58,7 +65,14 @@ const todoSlice = createSlice({
             if (clickedDoneToDo) {
                 clickedDoneToDo.status = false;
 
-                state.todos = [...state.todos, {id: clickedDoneToDo.id, title: clickedDoneToDo.title, status: clickedDoneToDo.status}];
+                let id;
+                if (state.todos.length === 0) {
+                    id = 0;
+                } else {
+                    id = state.todos[state.todos.length - 1].id + 1;
+                }
+
+                state.todos = [...state.todos, {id: id, title: clickedDoneToDo.title, status: clickedDoneToDo.status}];
             }
         },
         deleteToDo: (state, action) => {
