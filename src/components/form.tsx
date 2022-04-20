@@ -25,7 +25,6 @@ export const Form = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={formStyle}>
-            <label>Task：</label>
             <input { ...register("task")} />
             <input type="submit" />
         </form>
