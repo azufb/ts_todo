@@ -3,6 +3,7 @@ import { calculateAchievement, changeStatus, deleteToDo } from "../slice/slice";
 import { RootState } from '../store/store';
 import { DeleteAllBtn } from "./DeleteAllBtn";
 import { sprinkles } from "../styles/sprinkles.css";
+import { doneBtnStyle } from "../styles/toDos.css";
 
 export const ToDos = () => {
     const dispatch = useDispatch();
@@ -27,7 +28,7 @@ export const ToDos = () => {
                 {todo.map((item) => {
                 return ( 
                     <li key={item.id}>{item.title}
-                        {!item.status ? <button onClick={() => handleChangeStatus(item.id)}>未完了</button> : <button>完了</button>}
+                        <button onClick={() => handleChangeStatus(item.id)} className={doneBtnStyle}>完了する</button>
                         <button onClick={() => handleDeleteToDo(item.id)}>削除</button>
                     </li>
                 )
