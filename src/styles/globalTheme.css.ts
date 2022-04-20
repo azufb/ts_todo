@@ -8,6 +8,9 @@ export const globalTheme = createGlobalTheme(':root', {
     font: {
         color: '#FFFFFF'
     },
+    color: {
+        success: '#7FFF7F'
+    },
     size: {
         xs: '0.5rem',
         s: '1.5rem',
