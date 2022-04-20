@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { backStatus, calculateAchievement, deleteDoneToDo } from "../slice/slice";
 import { RootState } from '../store/store';
 import { sprinkles } from "../styles/sprinkles.css";
-import { doneToDoStyle, doneToDoTextStyle, backBtnStyle } from "../styles/doneToDos.css";
+import { doneToDoStyle, doneStarStyle, doneToDoTextStyle, backBtnStyle } from "../styles/doneToDos.css";
 
 export const DoneToDos = () => {
     const dispatch = useDispatch();
@@ -21,7 +21,7 @@ export const DoneToDos = () => {
                 {doneTodos.map((item) => {
                     return (
                         <div key={item.id} className={doneToDoStyle}>
-                            <span>★</span>
+                            <span className={doneStarStyle}>★</span>
                             <p className={doneToDoTextStyle}>{item.title}</p>
                             <button onClick={() => handleBackStatus(item.id)} className={backBtnStyle}>戻す</button>
                         </div>
