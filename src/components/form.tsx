@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addToDo, calculateAchievement } from "../slice/slice";
-import { formStyle } from "../styles/form.css";
+import { formStyle, submitBtn } from "../styles/form.css";
 
 interface inputForm {
     task: String
@@ -26,7 +26,7 @@ export const Form = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={formStyle}>
             <input { ...register("task")} />
-            <input type="submit" />
+            <input type="submit" className={submitBtn} />
         </form>
     );
 }
