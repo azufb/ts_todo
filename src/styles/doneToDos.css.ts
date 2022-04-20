@@ -6,6 +6,10 @@ export const doneToDoStyle = style({
     justifyContent: 'space-between'
 });
 
+export const doneStarStyle = style({
+    color: globalTheme.color.success
+});
+
 export const doneToDoTextStyle = style({
     width: '100%',
     textAlign: 'left',
