@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { calculateAchievement, changeStatus, deleteToDo } from "../slice/slice";
 import { RootState } from '../store/store';
 import { sprinkles } from "../styles/sprinkles.css";
-import { doneBtnStyle, deleteBtn } from "../styles/toDos.css";
+import { toDoStyle, toDoTextStyle, doneBtnStyle, deleteBtn } from "../styles/toDos.css";
 
 export const ToDos = () => {
     const dispatch = useDispatch();
@@ -22,16 +22,18 @@ export const ToDos = () => {
     return (
         <div className={sprinkles({width: '50%'})}>
             <h1 className={sprinkles({textAlign: 'center'})}>タスク一覧</h1>
-            <ul>
+            <div>
                 {todo.map((item) => {
                 return ( 
-                    <li key={item.id}>{item.title}
-                        <button onClick={() => handleChangeStatus(item.id)} className={doneBtnStyle}>完了する</button>
+                    <div key={item.id} className={toDoStyle}>
+                        <span>★</span>
+                        <p className={toDoTextStyle}>{item.title}</p>
+                        <button onClick={() => handleChangeStatus(item.id)} className={doneBtnStyle}>完了</button>
                         <button onClick={() => handleDeleteToDo(item.id)} className={deleteBtn}>削除</button>
-                    </li>
+                    </div>
                 )
                 })}
-            </ul>
+            </div>
         </div>
     )
 }
