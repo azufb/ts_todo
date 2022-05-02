@@ -9,12 +9,13 @@ module.exports = {
       new VanillaExtractPlugin(),
       new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '..', './src/index.html')
+            template: path.resolve(__dirname, 'src/index.html')
         })
     ],
-    entry: path.resolve(__dirname, '..', './src/index.tsx'),
+    entry: path.resolve(__dirname, 'src/index.tsx'),
     output: {
-      path: path.resolve(__dirname, '..', './build'),
+      path: path.resolve(__dirname, 'build/'),
+      publicPath: '/',
       filename: "bundle.js",
     },
     module: {
@@ -40,6 +41,7 @@ module.exports = {
     },
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".json"],
+      modules: ['src', 'node_modules']
     },
     target: ["web", "es5"],
 };
